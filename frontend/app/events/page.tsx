@@ -8,8 +8,10 @@ export default function EventsPage() {
   ];
 
   return (
-    <section>
-      <h1>最新活動</h1>
-    </section>
+    <div>
+      <h1 className="text-3xl font-bold text-red-700 my-4">系友會活動</h1>
+      <h1 className="text-3xl font-bold text-red-700 my-4">土木系活動</h1>
+      <h1 className="text-3xl font-bold text-red-700 my-4">系學會活動</h1>
+    </div>
   );
 }
