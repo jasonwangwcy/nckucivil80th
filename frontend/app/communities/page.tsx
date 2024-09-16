@@ -7,7 +7,7 @@ export default function CommunitiesPage() {
   
     return (
       <section>
-        <h1>校友會社團</h1>
+        <h1>系友會社團</h1>
       </section>
     );
   }
