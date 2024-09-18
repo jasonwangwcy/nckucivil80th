@@ -2,7 +2,8 @@ import "./globals.css";
 import { ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../components/logo2.png'; 
+import logo from '.././public/logo2.png'; 
+
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -13,12 +14,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <Image src={logo} alt="Logo" width={300} height={50} />
           </Link>
           <nav className="flex space-x-4">
-            <Link href="/">首頁</Link>
-            <Link href="/about">關於我們</Link>
-            <Link href="/events">系列活動</Link>
-            <Link href="/communities">系慶活動</Link> 
-            <Link href="/contact">聯絡我們</Link>
-            <Link href="/links">相關連結</Link>
+            <Link href="/" className="hover:text-pink-200 active:text-pink-400">首頁</Link>
+            <Link href="/about" className="hover:text-pink-200 active:text-pink-400">關於我們</Link>
+            <Link href="/events" className="hover:text-pink-200 active:text-pink-400">系列活動</Link>
+            <Link href="/communities" className="hover:text-pink-200 active:text-pink-400">系慶活動</Link> 
+            <Link href="/contact" className="hover:text-pink-200 active:text-pink-400">聯絡我們</Link>
+            <Link href="/links" className="hover:text-pink-200 active:text-pink-400">相關連結</Link>
           </nav>
         </header>
         <main>{children}</main>

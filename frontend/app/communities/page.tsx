@@ -1,5 +1,5 @@
 'use client';
-import logo from '../../components/logo.png';
+import logo from '../../public/logo.png';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'; 
 
@@ -16,17 +16,20 @@ export default function CommunitiesPage() {
     fetchCommunities();
   }, []);
     return (
-      <div className="bg-white p-4 grid grid-cols-4 gap-4">
-        {communities.map((event, index) => (
-          <div key={index} className="border p-4 bg-white">
-            <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
-            <h3 className="font-bold">
-              <a href={event.link} className="text-blue-500 hover:underline">{event.title}</a>
-            </h3>
-            <p>{event.date}</p>
-            <p>{event.description}</p>
-          </div>
-        ))}
+      <div>
+        <h1 className="text-3xl font-bold text-red-700 my-4">系慶活動</h1>
+        <div className="bg-white p-4 grid grid-cols-4 gap-4">
+          {communities.map((event, index) => (
+            <div key={index} className="border p-4 bg-white">
+              <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
+              <h3 className="font-bold">
+                <a href={event.link} className="text-blue-500 hover:underline">{event.title}</a>
+              </h3>
+              <p>{event.date}</p>
+              <p>{event.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }
