@@ -32,6 +32,10 @@
     - layout.tsx
     - page.tsx
 
-'''
+## 安裝
+
 npm install or pnpm install
-'''
+
+## 啟動
+
+npm run dev or pnpm run dev
