@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState, useEffect } from 'react';
 import { Carousel,
     CarouselContent,
     CarouselItem,
@@ -13,12 +14,29 @@ import image4 from '../components/4.jpg';
 import Image from 'next/image';
 
 export default function HomePage() {
-  const events = [
-    { title: '台北成大校友會 9/21活動', date: '2024-09-21', description: '跨文化講座' },
-    { title: '登山健行活動', date: '2024-09-30', description: '台北山行活動' },
-    { title: '科技講座', date: '2024-10-10', description: '最新科技趨勢' },
-    { title: '音樂會', date: '2024-10-20', description: '校友音樂會' },
-  ];
+  const [events, setEvents] = useState<{ title: string; date: string; description: string, link: string }[]>([]);
+  const [communities, setCommunities] = useState<{ title: string; date: string; description: string, link: string }[]>([]);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      const response = await fetch('/api/events'); // 修改 API 路徑
+      if (response.ok) {
+        const data = await response.json();
+        setEvents(data);
+      }
+    };
+
+    const fetchCommunities = async () => {
+      const response = await fetch('/api/communities'); // 修改 API 路徑
+      if (response.ok) {
+        const data = await response.json();
+        setCommunities(data);
+      }
+    };
+
+    fetchEvents();
+    fetchCommunities();
+  }, []);
 
   return (
     <>
@@ -48,24 +66,28 @@ export default function HomePage() {
       </div>
       <h1 className="text-3xl font-bold text-red-700 my-4">最新活動</h1>
       <div className="bg-white p-4 grid grid-cols-4 gap-4">
-        {events.map((event, index) => (
-          <div key={index} className="border p-4">
-            <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
-            <h3 className="font-bold">
-              <a href={`#event-${index}`} className="text-blue-500 hover:underline">{event.title}</a>
-            </h3>
-            <p>{event.date}</p>
-            <p>{event.description}</p>
-          </div>
-        ))}
+        {events.length > 0 ? (
+          events.slice(-4).map((event, index) => (
+            <div key={index} className="border p-4">
+              <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
+              <h3 className="font-bold">
+                <a href={event.link} className="text-blue-500 hover:underline">{event.title}</a>
+              </h3>
+              <p>{event.date}</p>
+              <p>{event.description}</p>
+            </div>
+          ))
+        ) : (
+          <p>沒有活動可顯示</p>
+        )}
       </div>
       <h1 className="text-3xl font-bold text-red-700 my-4">系列活動</h1>
       <div className="bg-red-100 p-4 grid grid-cols-4 gap-4">
-        {events.map((event, index) => (
+        {communities.slice(-4).map((event, index) => (
           <div key={index} className="border p-4 bg-white">
             <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
             <h3 className="font-bold">
-              <a href={`#event-${index}`} className="text-blue-500 hover:underline">{event.title}</a>
+              <a href={event.link} className="text-blue-500 hover:underline">{event.title}</a>
             </h3>
             <p>{event.date}</p>
             <p>{event.description}</p>

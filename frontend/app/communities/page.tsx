@@ -1,13 +1,32 @@
+'use client';
+import logo from '../../components/logo.png';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image'; 
+
 export default function CommunitiesPage() {
-    const communities = [
-      { name: '籃球社', description: '籃球社活動介紹' },
-      { name: '單車社', description: '單車社活動介紹' },
-      { name: '健行社', description: '健行社活動介紹' },
-    ];
-  
+  const [communities, setCommunities] = useState<{ title: string; date: string; description: string, link: string }[]>([]);
+  const fetchCommunities = async () => {
+    const response = await fetch('/api/communities'); 
+    if (response.ok) {
+      const data = await response.json();
+      setCommunities(data);
+    }
+  };
+  useEffect(() => {
+    fetchCommunities();
+  }, []);
     return (
-      <section>
-        <h1>系友會社團</h1>
-      </section>
+      <div className="bg-white p-4 grid grid-cols-4 gap-4">
+        {communities.map((event, index) => (
+          <div key={index} className="border p-4 bg-white">
+            <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
+            <h3 className="font-bold">
+              <a href={event.link} className="text-blue-500 hover:underline">{event.title}</a>
+            </h3>
+            <p>{event.date}</p>
+            <p>{event.description}</p>
+          </div>
+        ))}
+      </div>
     );
   }
