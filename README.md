@@ -34,8 +34,12 @@
 
 ## 安裝
 
+```bash
 npm install or pnpm install
+```
 
 ## 啟動
 
+```bash
 npm run dev or pnpm run dev
+```
