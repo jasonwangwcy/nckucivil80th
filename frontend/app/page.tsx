@@ -42,11 +42,8 @@ export default function HomePage() {
     <>
       <div className="bg-red-100 p-4 h-80 md:h-96 lg:h-[30rem] overflow-hidden">
   <Carousel className="h-full relative">
-    {/* 左右控制按鈕 */}
     <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10" />
     <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10" />
-
-    {/* 內容區域 */}
     <CarouselContent className="h-full">
       <CarouselItem className="flex justify-center items-center h-full">
         <Image src={image1} alt="Logo" className="w-3/4 sm:w-1/2 md:w-1/4 lg:w-1/6 h-auto object-contain" />
