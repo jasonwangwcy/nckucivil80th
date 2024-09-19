@@ -46,19 +46,19 @@ export default function HomePage() {
     <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10" />
     <CarouselContent className="h-full">
       <CarouselItem className="flex justify-center items-center h-full">
-        <Image src={image1} alt="Logo" className="w-3/4 sm:w-1/2 md:w-1/4 lg:w-1/6 h-auto object-contain" />
+        <Image src={image1} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3 h-auto object-contain mt-4" />
       </CarouselItem>
       <CarouselItem className="flex justify-center items-center h-full">
-        <Image src={image2} alt="Logo" className="w-3/4 sm:w-1/2 md:w-1/4 lg:w-1/6 h-auto object-contain" />
+        <Image src={image2} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3 h-auto object-contain mt-4" />
       </CarouselItem>
       <CarouselItem className="flex justify-center items-center h-full">
-        <Image src={image3} alt="Logo" className="w-3/4 sm:w-1/2 md:w-1/4 lg:w-1/6 h-auto object-contain" />
+        <Image src={image3} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3 h-auto object-contain mt-4" />
       </CarouselItem>
       <CarouselItem className="flex justify-center items-center h-full">
-        <Image src={image4} alt="Logo" className="w-3/4 sm:w-1/2 md:w-1/4 lg:w-1/6 h-auto object-contain" />
+        <Image src={image4} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3 h-auto object-contain mt-4" />
       </CarouselItem>
       <CarouselItem className="flex justify-center items-center h-full">
-        <Image src={logo} alt="Logo" className="w-3/4 sm:w-1/2 md:w-1/4 lg:w-1/6 h-auto object-contain" />
+        <Image src={logo} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3 h-auto object-contain mt-4" />
       </CarouselItem>
     </CarouselContent>
   </Carousel>
