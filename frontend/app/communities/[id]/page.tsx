@@ -1,8 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import logo from '../../../public/logo.png'; // 引入你的 logo 圖片
+import logo from '../../../public/logo.png'; 
 
 export default function EventDetail({ params }: { params: { id: string } }) {
   const [eventData, setEventData] = useState<{ title: string; date: string; description: string } | null>(null);
