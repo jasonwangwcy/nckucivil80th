@@ -15,6 +15,7 @@ import c4 from '.././public/a8.jpg';
 import c5 from '.././public/aa.jpg';
 import c6 from '.././public/dance.jpg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HomePage() {
   const [events, setEvents] = useState<{ title: string; date: string; description: string, link: string }[]>([]);
@@ -72,14 +73,15 @@ export default function HomePage() {
       <h1 className="text-3xl font-bold text-red-700 my-4">最新活動</h1>
       <div className="bg-white p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {events.length > 0 ? (
-          events.slice(-4).map((event, index) => (
+          events.slice(-4).reverse().map((event, index) => (
             <div key={index} className="border p-4">
               <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
-              <h3 className="font-bold">
-                <a href={event.link} className="text-blue-500 hover:underline">{event.title}</a>
+              <h3 className="font-bold text-center">
+                <Link href={`/events/${events.length - index }`} legacyBehavior>
+                  <a className="text-blue-500 hover:underline">{event.title}</a>
+                </Link>
               </h3>
-              <p>{event.date}</p>
-              <p>{event.description}</p>
+              <p className="text-center">{event.date}</p>
             </div>
           ))
         ) : (
@@ -88,14 +90,15 @@ export default function HomePage() {
       </div>
       <h1 className="text-3xl font-bold text-red-700 my-4">系列活動</h1>
       <div className="bg-red-100 p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {communities.slice(-4).map((event, index) => (
+        {communities.slice(-4).reverse().map((event, index) => (
           <div key={index} className="border p-4 bg-white">
             <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
-            <h3 className="font-bold">
-              <a href={event.link} className="text-blue-500 hover:underline">{event.title}</a>
+            <h3 className="font-bold text-center">
+            <Link href={`/communities/${communities.length - index }`} legacyBehavior>
+                <a className="text-blue-500 hover:underline">{event.title}</a>
+              </Link>
             </h3>
-            <p>{event.date}</p>
-            <p>{event.description}</p>
+            <p className="text-center">{event.date}</p>
           </div>
         ))}
       </div>
