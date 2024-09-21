@@ -11,6 +11,12 @@ const events = [
   { id:'8', title: '音樂會2', date: '2024-10-20', description: '校友音樂會', link:'https://www.ncku.edu.tw/' }, 
 ];
 
-export async function GET() {
-  return NextResponse.json(events); 
-}
+export async function GET(request: Request, { params }: { params: { id: string } }) {
+    const event = events.find((event) => event.id === params.id);
+  
+    if (event) {
+      return NextResponse.json(event);
+    } else {
+      return NextResponse.json({ error: 'Event not found' }, { status: 404 });
+    }
+  }

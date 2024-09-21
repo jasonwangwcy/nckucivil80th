@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import logo from '../../public/logo.png';//import EventCard from '../../components/EventCard';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function EventsPage() {
   const [events, setEvents] = useState<{ title: string; date: string; description: string, link: string }[]>([]);
@@ -23,9 +24,9 @@ export default function EventsPage() {
           events.map((event, index) => (
             <div key={index} className="border p-4">
                <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
-              <h3 className="font-bold">
-                <a href={event.link} className="text-blue-500 hover:underline">{event.title}</a>
-              </h3>
+               <Link href={`/events/${index + 1}`} legacyBehavior>
+                  <a className="text-blue-500 hover:underline">{event.title}</a>
+                </Link>
               <p>{event.date}</p>
               <p>{event.description}</p>
             </div>
@@ -40,9 +41,9 @@ export default function EventsPage() {
           events.map((event, index) => (
             <div key={index} className="border p-4">
                <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
-              <h3 className="font-bold">
-                <a href={event.link} className="text-blue-500 hover:underline">{event.title}</a>
-              </h3>
+               <Link href={`/events/${index + 1}`} legacyBehavior>
+                  <a className="text-blue-500 hover:underline">{event.title}</a>
+                </Link>
               <p>{event.date}</p>
               <p>{event.description}</p>
             </div>
