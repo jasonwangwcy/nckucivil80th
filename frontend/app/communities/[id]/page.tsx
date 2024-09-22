@@ -9,7 +9,7 @@ export default function EventDetail({ params }: { params: { id: string } }) {
 
   useEffect(() => {
     const fetchEvent = async () => {
-      const response = await fetch(`/api/events/${id}`); 
+      const response = await fetch(`/api/communities/${id}`); 
       if (response.ok) {
         const data = await response.json();
         setEventData(data);

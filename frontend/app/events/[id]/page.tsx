@@ -28,7 +28,7 @@ export default function EventDetail({ params }: { params: { id: string } }) {
       <h1 className="text-3xl font-bold mb-4">{eventData.title}</h1>
       <Image src={logo} alt="Event Image" className="w-auto h-48 object-cover mb-4" />
       <p className="text-gray-600 mb-2">{eventData.date}</p>
-      <p>{eventData.description}</p>
+      <div className="description" dangerouslySetInnerHTML={{ __html: eventData.description }}></div>
     </div>
   );
 }
