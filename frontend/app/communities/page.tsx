@@ -3,6 +3,7 @@ import logo from '../../public/logo.png';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'; 
 import Link from 'next/link';
+import banner4 from '../../public/banner4.jpg'
 
 export default function CommunitiesPage() {
   const [communities, setCommunities] = useState<{ title: string; date: string; description: string, link: string }[]>([]);
@@ -18,6 +19,7 @@ export default function CommunitiesPage() {
   }, []);
     return (
       <div>
+        <Image src={banner4} alt="banner 4" ></Image>
         <h1 className="text-3xl font-bold text-red-700 my-4">系慶活動</h1>
         <div className="bg-white p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {communities.slice().reverse().map((event, index) => (
