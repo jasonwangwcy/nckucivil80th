@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '.././public/logo2.png'; 
 import menuicon from '.././public/menuicon.png';
+import logo2 from '.././public/logo (1).png';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-Hant">
       <body>
-        <header className="flex flex-col md:flex-row items-center p-4 bg-white text-black">
+        <header className="fixed top-0 left-0 w-full z-50 flex flex-col md:flex-row items-center p-4 bg-white text-black"> {/* 添加 fixed、top-0、left-0 和 w-full 以固定导航栏 */}
           <div className="flex items-center w-full md:w-auto">
             <Link href="/" className="mr-4">
               <Image src={logo} alt="Logo" width={300} height={50} />
@@ -34,7 +35,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </nav>
         </header>
         <main>{children}</main>
-        <footer className="text-center mt-4">© 2024 成大土木系友會</footer>
+        <footer className="text-center mt-4">
+          <div className="flex justify-center"> 
+            <Image src={logo2} alt="logo2"/> 
+          </div>
+          <p className="mt-4">© 2024 成大土木系友會</p>
+          </footer>
       </body>
     </html>
   );

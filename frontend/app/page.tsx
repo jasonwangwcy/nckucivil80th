@@ -44,7 +44,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="bg-red-100 p-4 h-50 md:h-96 lg:h-auto overflow-hidden">
+      <div className="mt-10 bg-red-100 p-4 h-50 md:h-96 lg:h-auto overflow-hidden">
         <Carousel className="h-full relative">
           <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10" />
           <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10" />

@@ -41,7 +41,7 @@ export default function EventsPage() {
   }, []);
   return (
     <div>
-      <h1 className="text-3xl font-bold text-red-700 my-4">系友會活動</h1>
+      <h1 className="mt-10 text-3xl font-bold text-red-700 my-4">系友會活動</h1>
       <div className="bg-white p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {events.length > 0 ? (
           events.slice().reverse().map((event, index) => (
