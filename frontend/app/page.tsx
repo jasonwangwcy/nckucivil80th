@@ -71,7 +71,7 @@ export default function HomePage() {
         </Carousel>
       </div>
       <h1 className="text-3xl font-bold text-red-700 my-4">最新活動</h1>
-      <div className="bg-white p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="bg-white p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {events.length > 0 ? (
           events.slice(-4).reverse().map((event, index) => (
             <div key={index} className="border p-4">
@@ -88,8 +88,8 @@ export default function HomePage() {
           <p>沒有活動可顯示</p>
         )}
       </div>
-      <h1 className="text-3xl font-bold text-red-700 my-4">系列活動</h1>
-      <div className="bg-red-100 p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <h1 className="text-3xl font-bold text-red-700 my-4 ">系列活動</h1> 
+      <div className="bg-red-100 p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {communities.slice(-4).reverse().map((event, index) => (
           <div key={index} className="border p-4 bg-white">
             <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />

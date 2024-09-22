@@ -42,7 +42,7 @@ export default function EventsPage() {
   return (
     <div>
       <h1 className="text-3xl font-bold text-red-700 my-4">系友會活動</h1>
-      <div className="bg-white p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="bg-white p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {events.length > 0 ? (
           events.slice().reverse().map((event, index) => (
             <div key={index} className="border p-4">
@@ -58,7 +58,7 @@ export default function EventsPage() {
         )}
       </div>
       <h1 className="text-3xl font-bold text-red-700 my-4">土木系活動</h1>
-        <div className="bg-white p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="bg-white p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {departments.length > 0 ? (
           departments.slice().reverse().map((department, index) => (
             <div key={index} className="border p-4">
@@ -74,7 +74,7 @@ export default function EventsPage() {
         )}
       </div>
       <h1 className="text-3xl font-bold text-red-700 my-4">系學會活動</h1>
-      <div className="bg-white p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="bg-white p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {associations.length > 0 ? (
           associations.slice().reverse().map((association, index) => (
             <div key={index} className="border p-4">

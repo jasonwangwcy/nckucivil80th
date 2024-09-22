@@ -19,7 +19,7 @@ export default function CommunitiesPage() {
     return (
       <div>
         <h1 className="text-3xl font-bold text-red-700 my-4">系慶活動</h1>
-        <div className="bg-white p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="bg-white p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {communities.slice().reverse().map((event, index) => (
             <div key={index} className="border p-4 bg-white">
               <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
