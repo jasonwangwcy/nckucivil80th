@@ -1,6 +1,6 @@
 export default function ContactPage() {
     return (
-      <section className="mt-10">
+      <section className="mt-20">
         <h1>聯絡我們</h1>
         <p>成大土木系友會</p>
         <p>電話：06-2757575</p>

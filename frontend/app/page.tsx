@@ -18,8 +18,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function HomePage() {
-  const [events, setEvents] = useState<{ title: string; date: string; description: string, link: string }[]>([]);
-  const [communities, setCommunities] = useState<{ title: string; date: string; description: string, link: string }[]>([]);
+  const [events, setEvents] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
+  const [communities, setCommunities] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -44,7 +44,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="mt-10 bg-red-100 p-4 h-50 md:h-96 lg:h-auto overflow-hidden">
+      <div className="mt-20 bg-red-100 p-4 h-50 md:h-96 lg:h-auto overflow-hidden">
         <Carousel className="h-full relative">
           <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10" />
           <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10" />
@@ -75,7 +75,7 @@ export default function HomePage() {
         {events.length > 0 ? (
           events.slice(-4).reverse().map((event, index) => (
             <div key={index} className="border p-4">
-              <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
+              <Image src={event.image} alt="Event Image" className="w-full h-48 object-cover mb-2" />
               <h3 className="font-bold text-center">
                 <Link href={`/events/${events.length - index }`} legacyBehavior>
                   <a className="text-blue-500 hover:underline">{event.title}</a>
