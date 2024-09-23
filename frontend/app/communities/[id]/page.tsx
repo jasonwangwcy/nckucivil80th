@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import logo from '../../../public/logo.png'; 
+
 
 export default function EventDetail({ params }: { params: { id: string } }) {
   const [eventData, setEventData] = useState<{ title: string; date: string; description: string; image: string} | null>(null);
