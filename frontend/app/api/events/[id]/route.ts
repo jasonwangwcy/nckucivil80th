@@ -5,7 +5,16 @@ const events = [
   { id:'2', title: '登山健行活動', date: '2024-09-30', description: '台北山行活動', link:'https://imgur.com/a/I1pSv1W'},
   { id:'3', title: '科技講座', date: '2024-10-10', description: '最新科技趨勢', link:'https://imgur.com/a/I1pSv1W' },
   { id:'4', title: '音樂會', date: '2024-10-20', description: '校友音樂會', link:'https://imgur.com/a/I1pSv1W' },
-  { id:'5', title: '台北成大校友會 9/21活動2', date: '2024-09-21', description: '跨文化講座', link:'https://imgur.com/a/I1pSv1W'},
+  { id:'5', title: '帆遊安平港', 
+    date: '民國113年11月10日', 
+    description: '報名連結：<a href="https://i6gh8y.1shop.tw/ud0f61" target="_blank" rel="noopener noreferrer"> https://i6gh8y.1shop.tw/ud0f61 </a>', 
+    image:{
+      src: "/images/sailboatdescription.png",
+      width: 400,
+      height: 600,
+    },
+    link:'https://imgur.com/a/I1pSv1W'
+  },
   { id:'6', 
     title: 'Oktoberfest 德國啤酒節', 
     date: '民國113年9月28日', 
