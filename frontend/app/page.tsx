@@ -7,7 +7,6 @@ import { Carousel,
     CarouselPrevious,
     } from '../components/ui/carousel'; 
 
-import logo from '.././public/logo.png';
 import c1 from '.././public/a2.jpg';
 import c2 from '.././public/a4.jpg';
 import c3 from '.././public/a7.jpg';
@@ -92,7 +91,7 @@ export default function HomePage() {
       <div className="bg-red-100 p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {communities.slice(-4).reverse().map((event, index) => (
           <div key={index} className="border p-4 bg-white">
-            <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
+            <Image src={event.image} alt="Event Image" className="w-full h-48 object-cover mb-2" />
             <h3 className="font-bold text-center">
             <Link href={`/communities/${communities.length - index }`} legacyBehavior>
                 <a className="text-blue-500 hover:underline">{event.title}</a>

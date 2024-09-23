@@ -1,13 +1,12 @@
 'use client';
 import { useState, useEffect } from 'react';
-import logo from '../../public/logo.png';//import EventCard from '../../components/EventCard';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function EventsPage() {
-  const [events, setEvents] = useState<{ title: string; date: string; description: string, link: string }[]>([]);
-  const [departments, setDepartments] = useState<{ title: string; date: string; description: string, link: string }[]>([]);
-  const [associations, setAssociations] = useState<{ title: string; date: string; description: string, link: string }[]>([]);
+  const [events, setEvents] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
+  const [departments, setDepartments] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
+  const [associations, setAssociations] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -46,7 +45,7 @@ export default function EventsPage() {
         {events.length > 0 ? (
           events.slice().reverse().map((event, index) => (
             <div key={index} className="border p-4">
-               <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
+               <Image src={event.image} alt="Event Image" className="w-full h-48 object-cover mb-2" />
                <Link href={`/events/${events.length - index}`} legacyBehavior>
                   <a className="text-blue-500 hover:underline block text-center">{event.title}</a>
                 </Link>
@@ -62,7 +61,7 @@ export default function EventsPage() {
       {departments.length > 0 ? (
           departments.slice().reverse().map((department, index) => (
             <div key={index} className="border p-4">
-               <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
+               <Image src={department.image} alt="Event Image" className="w-full h-48 object-cover mb-2" />
                <Link href={`/department/${departments.length - index}`} legacyBehavior>
                   <a className="text-blue-500 hover:underline block text-center">{department.title}</a>
                 </Link>
@@ -78,7 +77,7 @@ export default function EventsPage() {
       {associations.length > 0 ? (
           associations.slice().reverse().map((association, index) => (
             <div key={index} className="border p-4">
-               <Image src={logo} alt="Event Image" className="w-full h-48 object-cover mb-2" />
+               <Image src={association.image} alt="Event Image" className="w-full h-48 object-cover mb-2" />
                <Link href={`/association/${associations.length - index}`} legacyBehavior>
                   <a className="text-blue-500 hover:underline block text-center">{association.title}</a>
                 </Link>
