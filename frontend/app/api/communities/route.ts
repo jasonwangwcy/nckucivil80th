@@ -35,6 +35,39 @@ const events = [
       height: 600,
     },  
     link:''},
+    { id:'5',title: '產業交流展', 
+      date: '', 
+      image:{
+        src: "/images/openhouse.jpg",
+        width: 400,
+        height: 600,
+      },  
+      link:''},
+      { id:'6',title: '園遊會', 
+        date: '', 
+        image:{
+          src: "/images/party.jpg",
+          width: 400,
+          height: 600,
+        },  
+        link:''},
+      { id:'7',title: '臨時郵局', 
+        date: '', 
+        image:{
+          src: "/images/postoffice.png",
+          width: 400,
+          height: 600,
+        },  
+        link:''},
+        { id:'8',title: '系友OB球賽', 
+          date: '', 
+          image:{
+            src: "/images/ob.png",
+            width: 400,
+            height: 600,
+          },  
+          link:''},
+
 ];
 
 export async function GET() {

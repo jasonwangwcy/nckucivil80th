@@ -24,7 +24,7 @@ export default function CommunitiesPage() {
           {communities.slice().reverse().map((event, index) => (
             <div key={index} className="border p-4 bg-white">
               <Image src={event.image} alt="Event Image" className="w-full h-48 object-cover mb-2" />
-              <Link href={`/events/${index + 1}`} legacyBehavior>
+              <Link href={`/communities/${communities.length-index }`} legacyBehavior>
                   <a className="text-blue-500 hover:underline block text-center">{event.title}</a>
                 </Link>
               <p className='text-center'>{event.date}</p>

@@ -30,7 +30,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <Link href="/about" className="hover:text-pink-200 active:text-pink-400">關於我們</Link>
               <Link href="/events" className="hover:text-pink-200 active:text-pink-400">系列活動</Link>
               <Link href="/communities" className="hover:text-pink-200 active:text-pink-400">系慶活動</Link> 
-              <Link href="/contact" className="hover:text-pink-200 active:text-pink-400">聯絡我們</Link>
+              <Link href="/commodity" className="hover:text-pink-200 active:text-pink-400">紀念商品</Link>
+              <Link href="/donation" className="hover:text-pink-200 active:text-pink-400">捐款贊助</Link>
               <Link href="/links" className="hover:text-pink-200 active:text-pink-400">相關連結</Link>
           </nav>
         </header>
