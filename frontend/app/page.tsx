@@ -53,12 +53,13 @@ export default function HomePage() {
 
   return (
     <>
-    <div className="mt-20 display: flex">
-      <div className=''>
-      <Table className="w-[300px]">
+    <div className="mt-20 flex flex-col-reverse md:flex-row mt-20 md:h-full lg:h-full overflow-hidden">
+      <div className='display: w-full md:w-full '>
+      <div className='w-full hidden md:block'>
+      <Table className="w-full mx-auto text-center">
         <TableHeader>
           <TableRow>
-             <TableHead className="font-bold">系慶活動</TableHead>
+             <TableHead className="font-bold text-center">系慶活動</TableHead>
           </TableRow>
         </TableHeader>
     <TableBody>
@@ -121,11 +122,77 @@ export default function HomePage() {
     </TableBody>
     </Table>  
       </div>
-      <div className="bg-red-100 p-4 h-50 md:h-auto lg:h-auto overflow-hidden">
+      <details className="w-full block md:hidden">
+    <summary className="font-bold bg-gray-200 p-4 rounded cursor-pointer">
+      點擊展開系慶活動
+    </summary>
+      <Table className="w-full mx-auto text-center">
+    <TableBody>
+      <TableRow>
+      <TableCell className="font-medium">
+          <Link href="/communities/1" legacyBehavior>
+            <a className="hover:underline">系史及系友生活相片展</a>
+          </Link>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+      <TableCell className="font-medium">
+          <Link href="/communities/5" legacyBehavior>
+            <a className="hover:underline">產業交流展</a>
+          </Link>
+        </TableCell>
+       </TableRow>
+      <TableRow>
+      <TableCell className="font-medium">
+          <Link href="/communities/6" legacyBehavior>
+            <a className="hover:underline">園遊會</a>
+          </Link>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+      <TableCell className="font-medium">
+          <Link href="/communities/7" legacyBehavior>
+            <a className="hover:underline">臨時郵局</a>
+          </Link>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+      <TableCell className="font-medium">
+          <Link href="/communities/2" legacyBehavior>
+            <a className="hover:underline">系史展覽</a>
+          </Link>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+      <TableCell className="font-medium">
+          <Link href="/communities/3" legacyBehavior>
+            <a className="hover:underline">系友返校同學會</a>
+          </Link>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+      <TableCell className="font-medium">
+          <Link href="/communities/8" legacyBehavior>
+            <a className="hover:underline">系友OB球賽</a>
+          </Link>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+      <TableCell className="font-medium">
+          <Link href="/communities/4" legacyBehavior>
+            <a className="hover:underline">系慶千人餐會</a>
+          </Link>
+        </TableCell>
+      </TableRow>
+    </TableBody>
+    </Table>  
+    </details>
+      </div>
+      <div className="bg-red-100 p-4 h-50 md:h-full lg:h-full overflow-hidden">
         <Carousel className="h-full relative">
           <CarouselContent className="h-full">
           <CarouselItem className="flex justify-center items-center min-h-full">
-              <Image src={card1} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto object-contain transform scale-110" />
+              <Image src={card1} alt="Logo" className="w-full sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto object-cover" />
             </CarouselItem>
           <CarouselItem className="flex justify-center items-center min-h-full">
               <Image src={card2} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto object-contain transform scale-110" />

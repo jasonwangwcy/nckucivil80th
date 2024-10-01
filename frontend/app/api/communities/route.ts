@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 const events = [
   { id:'1', 
-    title: '學生生活相片展', 
+    title: '系史及系友生活相片展', 
     date: '', 
     image:{
       src: "/images/studentlife.png",
