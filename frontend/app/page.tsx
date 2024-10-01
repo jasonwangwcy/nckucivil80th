@@ -14,21 +14,30 @@ import {
     TableRow,
     } from "@/components/ui/table"
     
-
-import c1 from '.././public/a2.jpg';
-import c2 from '.././public/a4.jpg';
-import c3 from '.././public/a7.jpg';
-import c4 from '.././public/a8.jpg';
-import c5 from '.././public/aa.jpg';
-import c6 from '.././public/dance.jpg';
-import card1 from '.././public/images/card2.png'
-import card2 from '.././public/images/card.png'
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function HomePage() {
   const [events, setEvents] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
   const [communities, setCommunities] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
+  const [images, setImages] = useState<{ id: string; image: { src: string; width: number; height: number } }[]>([]);
+
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch('/api/carousel'); // 調用 API
+        if (response.ok) {
+          const data = await response.json();
+          setImages(data); // 設置圖片數據
+        }
+      } catch (error) {
+        console.error('Error fetching images:', error);
+      }
+    };
+
+    fetchImages();
+  }, []);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -189,34 +198,21 @@ export default function HomePage() {
     </details>
       </div>
       <div className="bg-red-100 p-4 h-50 md:h-full lg:h-full overflow-hidden">
-        <Carousel className="h-full relative">
-          <CarouselContent className="h-full">
-          <CarouselItem className="flex justify-center items-center min-h-full">
-              <Image src={card1} alt="Logo" className="w-full sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto object-cover" />
+      <Carousel className="h-full w-full relative">
+        <CarouselContent className="h-full">
+          {images.map((item) => (
+            <CarouselItem key={item.id} className="flex justify-center items-center min-h-full">
+              <Image
+                src={item.image.src}
+                alt={`Image ${item.id}`}
+                width={item.image.width}
+                height={item.image.height}
+                className="w-full sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto object-cover"
+              />
             </CarouselItem>
-          <CarouselItem className="flex justify-center items-center min-h-full">
-              <Image src={card2} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto object-contain transform scale-110" />
-            </CarouselItem>
-            <CarouselItem className="flex justify-center items-center min-h-full">
-              <Image src={c1} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto object-contain transform scale-110" />
-            </CarouselItem>
-            <CarouselItem className="flex justify-center items-center min-h-full">
-              <Image src={c2} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto object-contain transform scale-110" />
-            </CarouselItem>
-            <CarouselItem className="flex justify-center items-center min-h-full">
-              <Image src={c3} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto object-contain transform scale-110" />
-            </CarouselItem>
-            <CarouselItem className="flex justify-center items-center min-h-full">
-              <Image src={c4} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto object-contain transform scale-110" />
-            </CarouselItem>
-            <CarouselItem className="flex justify-center items-center min-h-full">
-              <Image src={c5} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto object-contain transform scale-110" />
-            </CarouselItem>
-            <CarouselItem className="flex justify-center items-center min-h-full">
-              <Image src={c6} alt="Logo" className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto object-contain transform scale-110" />
-            </CarouselItem>
-          </CarouselContent>
-        </Carousel>
+          ))}
+        </CarouselContent>
+      </Carousel>
       </div>
       
       </div>
