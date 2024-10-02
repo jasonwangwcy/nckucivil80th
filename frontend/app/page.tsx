@@ -178,14 +178,14 @@ export default function HomePage() {
       <h1 className="text-3xl font-bold text-red-700 my-4 ">系慶活動</h1> 
       <div className="bg-red-100 p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {communities.map((event, index) => (
-          <div key={index} className="border p-4 bg-white  ">
-            <Image src={event.image} alt="Event Image" className="w-full h-48 object-cover mb-2" />
+          <div key={index} className="bg-white  ">
+            <Image src={event.image} alt="Event Image" className="w-full h-48 object-cover mb-2 " />
             <h3 className="font-bold text-center">
             <Link href={`/communities/${communities.length - index }`} legacyBehavior>
                 <a className="text-blue-500 hover:underline">{event.title}</a>
               </Link>
             </h3>
-            <p className="text-center">{event.date}</p>
+            <p className="hidden sm:block text-center">{event.date}</p>
           </div>
         ))}
       </div>
@@ -194,14 +194,14 @@ export default function HomePage() {
       <div className="bg-white p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {events.length > 0 ? (
           events.slice(-4).reverse().map((event, index) => (
-            <div key={index} className="border p-4">
+            <div key={index} className=" ">
               <Image src={event.image} alt="Event Image" className="w-full h-48 object-cover mb-2" />
               <h3 className="font-bold text-center">
                 <Link href={`/events/${events.length - index }`} legacyBehavior>
                   <a className="text-blue-500 hover:underline">{event.title}</a>
                 </Link>
               </h3>
-              <p className="text-center">{event.date}</p>
+              <p className="hidden sm:block text-center">{event.date}</p>
             </div>
           ))
         ) : (
