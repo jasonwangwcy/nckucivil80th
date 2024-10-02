@@ -5,7 +5,7 @@ import Link from 'next/link';
 import banner4 from '../../public/banner4.jpg'
 
 export default function CommunitiesPage() {
-  const [communities, setCommunities] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
+  const [communities, setCommunities] = useState<{ title: string; date: string; description: string, link: string, image: string,  }[]>([]);
   const fetchCommunities = async () => {
     const response = await fetch('/api/communities'); 
     if (response.ok) {

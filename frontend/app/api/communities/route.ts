@@ -60,7 +60,7 @@ const events = [
         },  
         link:''},
         { id:'8',title: '系友OB球賽', 
-          date: '民國113年11月9日  (星期六) ', 
+          date: '民國113年11月9日 (星期六) 13:00～16:00 ', 
           image:{
             src: "/images/ob.png",
             width: 400,

@@ -13,6 +13,7 @@ export default function AboutPage() {
         <Image src={postcard1} alt='postcard1'></Image>
         <Image src={postcard2} alt='postcard1'></Image>
         </div>
+        <a href='https://reurl.cc/Mj9pjX' target="_blank" rel="noopener noreferrer" className='text-2xl text-red-700 my-4'> 購買連結</a>
       </div>
       <div>
         <h1 className="text-3xl font-bold text-red-700 my-4">專屬紀念衫</h1>
@@ -21,6 +22,7 @@ export default function AboutPage() {
         <Image src={redshirt} alt='white'></Image>
         <Image src={blueshirt} alt='white'></Image>
         </div>
+        <a href='https://reurl.cc/4dqK6R' target="_blank" rel="noopener noreferrer" className='text-2xl text-red-700 my-4'> 購買連結</a>
       </div>
     </div>
   );

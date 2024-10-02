@@ -84,7 +84,7 @@ export default function HomePage() {
         </TableCell>
       </TableRow>
       <TableRow>
-      <TableCell className="font-medium">2024年11/9（六） 09:00～16:00</TableCell>
+      <TableCell className="font-medium">2024年11/9（六） 10:00～16:00</TableCell>
       <TableCell className="font-medium">
           <Link href="/communities/5" legacyBehavior>
             <a className="hover:underline">產業交流展</a>
@@ -92,7 +92,7 @@ export default function HomePage() {
         </TableCell>
        </TableRow>
       <TableRow>
-      <TableCell className="font-medium">2024年11/9（六） 09:00～16:00</TableCell>
+      <TableCell className="font-medium">2024年11/9（六） 11:00～14:00</TableCell>
       <TableCell className="font-medium">
           <Link href="/communities/6" legacyBehavior>
             <a className="hover:underline">園遊會</a>
@@ -100,7 +100,7 @@ export default function HomePage() {
         </TableCell>
       </TableRow>
       <TableRow>
-      <TableCell className="font-medium">2024年11/9（六） 09:00～16:00</TableCell>
+      <TableCell className="font-medium">2024年11/9（六） 11:00～16:00</TableCell>
       <TableCell className="font-medium">
           <Link href="/communities/7" legacyBehavior>
             <a className="hover:underline">臨時郵局</a>
@@ -108,7 +108,7 @@ export default function HomePage() {
         </TableCell>
       </TableRow>
       <TableRow>
-      <TableCell className="font-medium">2024年11/9（六） 09:00～16:00</TableCell>
+      <TableCell className="font-medium">2024年11/9（六） 14:00～16:00</TableCell>
       <TableCell className="font-medium">
           <Link href="/communities/3" legacyBehavior>
             <a className="hover:underline">系友返校同學會</a>
@@ -116,7 +116,7 @@ export default function HomePage() {
         </TableCell>
       </TableRow>
       <TableRow>
-      <TableCell className="font-medium">2024年11/9（六） 09:00～16:00</TableCell>
+      <TableCell className="font-medium">2024年11/9（六） 13:00～16:00</TableCell>
       <TableCell className="font-medium">
           <Link href="/communities/8" legacyBehavior>
             <a className="hover:underline">系友OB球賽</a>
@@ -124,7 +124,7 @@ export default function HomePage() {
         </TableCell>
       </TableRow>
       <TableRow>
-      <TableCell className="font-medium">2024年11/9（六） 09:00～16:00</TableCell>
+      <TableCell className="font-medium">2024年11/9（六） 18:00～21:00</TableCell>
       <TableCell className="font-medium">
           <Link href="/communities/4" legacyBehavior>
             <a className="hover:underline">系慶千人餐會</a>
@@ -134,7 +134,7 @@ export default function HomePage() {
       <TableRow>
       <TableCell className="font-medium">2024年11/9（六） 13:30～15:30</TableCell>
       <TableCell className="font-medium">
-          <Link href="/communities/4" legacyBehavior>
+          <Link href="/communities/2" legacyBehavior>
             <a className="hover:underline">系友講堂</a>
           </Link>
         </TableCell>
@@ -167,10 +167,31 @@ export default function HomePage() {
           <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full">▶</CarouselNext>
       </Carousel>
       </div>
-      
       </div>
+
+      <h1 className="text-3xl font-bold text-red-700 my-4 ">最新活動</h1> 
+      <div className=" p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        
+      </div>
+      
+     
+      <h1 className="text-3xl font-bold text-red-700 my-4 ">系慶活動</h1> 
+      <div className="bg-red-100 p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {communities.map((event, index) => (
+          <div key={index} className="border p-4 bg-white  ">
+            <Image src={event.image} alt="Event Image" className="w-full h-48 object-cover mb-2" />
+            <h3 className="font-bold text-center">
+            <Link href={`/communities/${communities.length - index }`} legacyBehavior>
+                <a className="text-blue-500 hover:underline">{event.title}</a>
+              </Link>
+            </h3>
+            <p className="text-center">{event.date}</p>
+          </div>
+        ))}
+      </div>
+
       <h1 className="text-3xl font-bold text-red-700 my-4">系列活動</h1>
-      <div className="bg-white p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="bg-white p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {events.length > 0 ? (
           events.slice(-4).reverse().map((event, index) => (
             <div key={index} className="border p-4">
@@ -187,20 +208,8 @@ export default function HomePage() {
           <p>沒有活動可顯示</p>
         )}
       </div>
-      <h1 className="text-3xl font-bold text-red-700 my-4 ">系慶活動</h1> 
-      <div className="bg-red-100 p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {communities.slice(-4).reverse().map((event, index) => (
-          <div key={index} className="border p-4 bg-white">
-            <Image src={event.image} alt="Event Image" className="w-full h-48 object-cover mb-2" />
-            <h3 className="font-bold text-center">
-            <Link href={`/communities/${communities.length - index }`} legacyBehavior>
-                <a className="text-blue-500 hover:underline">{event.title}</a>
-              </Link>
-            </h3>
-            <p className="text-center">{event.date}</p>
-          </div>
-        ))}
-      </div>
+
+      
     </>
   );
 }
