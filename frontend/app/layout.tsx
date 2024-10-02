@@ -26,13 +26,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </button>
           </div>
           <nav className={`flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 ${isOpen ? 'flex' : 'hidden' } md:flex md:ml-0 mt-2 md:items-center items-start pl-4`}>
-              <Link href="/" className="hover:text-pink-200 active:text-pink-400">首頁</Link>
-              <Link href="/about" className="hover:text-pink-200 active:text-pink-400">關於我們</Link>
-              <Link href="/communities" className="hover:text-pink-200 active:text-pink-400">系慶活動</Link> 
-              <Link href="/events" className="hover:text-pink-200 active:text-pink-400">系列活動</Link>
-              <Link href="/commodity" className="hover:text-pink-200 active:text-pink-400">紀念商品</Link>
-              <Link href="/donation" className="hover:text-pink-200 active:text-pink-400">捐款贊助</Link>
-              <Link href="/links" className="hover:text-pink-200 active:text-pink-400">相關連結</Link>
+              <Link href="/" className="hover:text-pink-200 active:text-pink-400" onClick={() => setIsOpen(false)}>首頁</Link>
+              <Link href="/about" className="hover:text-pink-200 active:text-pink-400" onClick={() => setIsOpen(false)}>關於我們</Link>
+              <Link href="/communities" className="hover:text-pink-200 active:text-pink-400" onClick={() => setIsOpen(false)}>系慶活動</Link> 
+              <Link href="/events" className="hover:text-pink-200 active:text-pink-400" onClick={() => setIsOpen(false)}>系列活動</Link>
+              <Link href="/commodity" className="hover:text-pink-200 active:text-pink-400" onClick={() => setIsOpen(false)}>紀念商品</Link>
+              <Link href="/donation" className="hover:text-pink-200 active:text-pink-400" onClick={() => setIsOpen(false)}>捐款贊助</Link>
+              <Link href="/links" className="hover:text-pink-200 active:text-pink-400" onClick={() => setIsOpen(false)}>相關連結</Link>
           </nav>
         </header>
         <main>{children}</main>
