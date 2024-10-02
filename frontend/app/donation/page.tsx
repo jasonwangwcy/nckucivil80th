@@ -3,7 +3,7 @@
 export default function DonationPage() {
   return (
     <section className="mt-20 p-4">
-      <h1 className="text-3xl font-bold text-red-700 mb-6">成功大學土木工程學系紀念創系80週年「千萬卓越基金募款」活動</h1>
+      <h1 className="text-3xl font-bold text-red-700 mb-6 text-center">成功大學土木工程學系紀念創系80週年「千萬卓越基金募款」活動</h1>
       <h2 className="text-2xl font-bold mb-4">✳️前言:</h2>
       <p className="mb-4">
         1944年創立的成大土木經歷二戰結束的大時代變動，在艱困貧乏環境師生教學相長，孕育工程人才厚植國力，建教合作協力國家建設，引領土木工程技術成長飛揚。
@@ -50,6 +50,13 @@ export default function DonationPage() {
         <li>📍千人餐會上台受頒感謝狀。</li>
         <li>📍宣傳海報LOGO曝光。</li>
         <li>📍活動社群媒體發文介紹。</li>
+      </ul>
+      <ul className="list-disc list-inside mb-4">
+        <h3 className="text-xl font-bold mb-2">小額捐款，一起協助成大土木系更卓越。</h3>
+        <li>⚛️捐款芳名錄:</li>
+        <a href="https://reurl.cc/myyKVV" >https://reurl.cc/myyKVV</a>
+        <li>⚛️邀請您共襄盛舉小額捐款，一起協助成大土木系更卓越。</li>
+        <a href='https://reurl.cc/xvp46z'>https://reurl.cc/xvp46z</a>
       </ul>
     </section>
   );

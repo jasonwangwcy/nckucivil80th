@@ -18,7 +18,9 @@ export default function CommunitiesPage() {
   }, []);
     return (
       <div>
-        <Image src={banner4} alt="banner 4" className='mt-20'></Image>
+        <div className='flex justify-center'>
+        <Image src={banner4} alt="banner 4" className='mt-20 '></Image>
+        </div>
         <h1 className="text-3xl font-bold text-red-700 my-4">系慶活動</h1>
         <div className="bg-white p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {communities.slice().reverse().map((event, index) => (
