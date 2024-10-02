@@ -181,7 +181,7 @@ export default function HomePage() {
           <div key={index} className="bg-white  ">
             <Image src={event.image} alt="Event Image" className="w-full h-48 object-cover mb-2 " />
             <h3 className="font-bold text-center">
-            <Link href={`/communities/${communities.length - index }`} legacyBehavior>
+            <Link href={`/communities/${index +1}`} legacyBehavior>
                 <a className="text-blue-500 hover:underline">{event.title}</a>
               </Link>
             </h3>
