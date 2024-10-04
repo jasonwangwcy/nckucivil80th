@@ -177,39 +177,53 @@ export default function HomePage() {
      
       <h1 className="text-3xl font-bold text-red-700 my-4 ">系慶活動</h1> 
       <div className="bg-red-100 p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {communities.map((event, index) => (
-          <div key={index} className="bg-white  ">
-            <Image src={event.image} alt="Event Image" className="w-full h-48 object-cover mb-2 " />
-            <h3 className="font-bold text-center">
-            <Link href={`/communities/${index +1}`} legacyBehavior>
-                <a className="text-blue-500 hover:underline">{event.title}</a>
+          {communities.map((event, index) => (
+              <div key={index} className="bg-white">
+            <Link href={`/communities/${index + 1}`} legacyBehavior>
+          <div className="aspect-w-16 aspect-h-9">
+            <Image 
+            src={event.image} 
+            alt="Event Image" 
+            className="w-full object-cover mb-2 h-24 sm:h-24 md:h-48" 
+               />
+             </div>
               </Link>
-            </h3>
-            <p className="hidden sm:block text-center">{event.date}</p>
-          </div>
-        ))}
-      </div>
-
-      <h1 className="text-3xl font-bold text-red-700 my-4">系列活動</h1>
-      <div className="bg-white p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {events.length > 0 ? (
-          events.slice(-4).reverse().map((event, index) => (
-            <div key={index} className=" ">
-              <Image src={event.image} alt="Event Image" className="w-full h-48 object-cover mb-2" />
-              <h3 className="font-bold text-center">
-                <Link href={`/events/${events.length - index }`} legacyBehavior>
-                  <a className="text-blue-500 hover:underline">{event.title}</a>
-                </Link>
-              </h3>
+            <h3 className="font-bold text-center">
+              <Link href={`/communities/${index + 1}`} legacyBehavior>
+           <a className="text-blue-500 hover:underline text-sm sm:text-base">{event.title}</a>
+           </Link>
+               </h3>
               <p className="hidden sm:block text-center">{event.date}</p>
-            </div>
-          ))
-        ) : (
-          <p>沒有活動可顯示</p>
-        )}
-      </div>
+                </div>
+                ))}
+                </div>
 
-      
+                <h1 className="text-3xl font-bold text-red-700 my-4">系列活動</h1>
+          <div className="bg-white p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {events.length > 0 ? (
+               events.slice(-4).reverse().map((event, index) => (
+              <div key={index} className="bg-white">
+               <Link href={`/events/${events.length - index}`} legacyBehavior>
+                <div className="aspect-w-16 aspect-h-9">
+                  <Image 
+                  src={event.image} 
+                  alt="Event Image" 
+                  className="w-full object-cover mb-2 h-24 sm:h-24 md:h-48" 
+                   />
+                 </div>
+                  </Link>
+               <h3 className="font-bold text-center">
+               <Link href={`/events/${events.length - index}`} legacyBehavior>
+               <a className="text-blue-500 hover:underline text-sm sm:text-base">{event.title}</a>
+                </Link>
+                </h3>
+             <p className="hidden sm:block text-center">{event.date}</p>
+             </div>
+             ))
+            ) : (
+           <p>沒有活動可顯示</p>
+                  )}
+        </div>    
     </>
-  );
+   );
 }
