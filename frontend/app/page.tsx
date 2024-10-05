@@ -23,7 +23,7 @@ export default function HomePage() {
   const [events, setEvents] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
   const [communities, setCommunities] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
   const [images, setImages] = useState<{ id: string; image: { src: string; width: number; height: number } }[]>([]);
-
+  const [latestevents, setLatestevents] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -62,6 +62,22 @@ export default function HomePage() {
     fetchCommunities();
   }, []);
 
+  useEffect(() => {
+    const fetchLatestevents = async () => {
+      try {
+        const response = await fetch('/api/latestevents'); 
+        if (response.ok) {
+          const data = await response.json();
+          setLatestevents(data);
+        }
+      } catch (error) {
+        console.error('Error fetching images:', error);
+      }
+    };
+
+    fetchLatestevents();
+  }, []);
+
   return (
     <>
     <div className="mt-20 flex flex-col-reverse md:flex-row mt-20 md:h-full lg:h-90 overflow-hidden">
@@ -75,6 +91,10 @@ export default function HomePage() {
           </TableRow>
         </TableHeader>
     <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">2024年11/9（六） 11:00～11:30</TableCell>
+      <TableCell className="font-medium">開幕儀式</TableCell>
+      </TableRow>
       <TableRow>
       <TableCell className="font-medium">2024年11/9（六） 09:00～16:00</TableCell>
       <TableCell className="font-medium">
@@ -158,7 +178,7 @@ export default function HomePage() {
                 alt={`Image ${item.id}`}
                 width={item.image.width}
                 height={item.image.height}
-                className="w-full sm:w-2/3 md:w-1/2 lg:w-3/4 h-auto object-cover"
+                className="w-full sm:w-2/3 md:w-1/2 lg:w-5/6 h-auto object-cover"
               />
             </CarouselItem>
           ))}
@@ -171,7 +191,25 @@ export default function HomePage() {
 
       <h1 className="text-3xl font-bold text-red-700 my-4 ">最新活動</h1> 
       <div className=" p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        
+        {latestevents.map((event, index) => (
+              <div key={index} className="bg-white">
+            <Link href={event.link} legacyBehavior>
+          <div className="aspect-w-16 aspect-h-9">
+            <Image 
+            src={event.image} 
+            alt="Event Image" 
+            className="w-full object-cover mb-2 h-24 sm:h-24 md:h-48" 
+               />
+             </div>
+              </Link>
+            <h3 className="font-bold text-center">
+              <Link href={event.link} legacyBehavior>
+           <a className="text-blue-500 hover:underline text-sm sm:text-base">{event.title}</a>
+           </Link>
+               </h3>
+              <p className="hidden sm:block text-center">{event.date}</p>
+                </div>
+                ))}
       </div>
       
      
