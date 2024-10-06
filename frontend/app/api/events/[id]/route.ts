@@ -1,8 +1,30 @@
 import { NextResponse } from 'next/server';
 
 const events = [
-  { id:'1', title: '台北成大校友會 9/21活動', date: '2024-09-21', description: '跨文化講座', link:'https://imgur.com/a/I1pSv1W'},
-  { id:'2', title: '登山健行活動', date: '2024-09-30', description: '台北山行活動', link:'https://imgur.com/a/I1pSv1W'},
+  { id:'1', 
+    title: '台中東海大學健行', 
+    date: '民國113年8月31日', 
+    description: '台中東海大學健行<br/>🎯活動日期：113/8/31(六)<br/>活動照片連結：<a href="https://www.facebook.com/share/p/7q7kmaP9UorHD1MQ/?mibextid=K35XfP" target="_blank" rel="noopener noreferrer"> https://www.facebook.com/share/p/7q7kmaP9UorHD1MQ/?mibextid=K35XfP </a><br/>', 
+    image:[
+      {
+      src: "/images/taichunghiking1.jpg",
+      width: 400,
+      height: 600,
+    }],
+    link:'https://imgur.com/a/I1pSv1W'},
+
+  { id:'2', 
+    title: '高雄壽山健行', 
+    date: '民國113年8月24日', 
+    description: '高雄壽山健行<br/>📆日期：113/8/24(六)<br/>活動照片連結：<a href="https://www.facebook.com/share/p/bFKVK4ACk1yKknjt/?mibextid=K35XfP" target="_blank" rel="noopener noreferrer"> https://www.facebook.com/share/p/bFKVK4ACk1yKknjt/?mibextid=K35XfP </a><br/>', 
+    image:[
+      {
+      src: "/images/kaosiunghiking1.jpg",
+      width: 400,
+      height: 600,
+    }],
+    link:'https://imgur.com/a/I1pSv1W'},
+
   { id:'3', 
     title: '輪遊高雄港', 
     date: '民國113年3月24日',
@@ -37,16 +59,16 @@ const events = [
     description: '113年的春天已經悄悄從高雄開始，邀請各位學長姐來高雄搭乘遊港船，與系友及家人從海上視角欣賞各式船舶及軍艦，從愛河口看全台首座水平旋轉大港橋及珊瑚造型的海洋流行音樂中心，到亞洲新灣區欣賞最新的上億豪華遊艇及高雄展覽館，全程搭配精彩解說，讓你從海上一覽曾經是世界大三大港高雄港的風采。', 
     link:'https://imgur.com/a/I1pSv1W' },
 
-  { id:'4', 
-    title: '登山活動', 
-    date: '', 
+  {  id:'4', 
+    title: '台北象山健行', 
+    date: '民國113年8月17日',
     image:[
       {
       src: "/images/hiking.jpg",
       width: 400,
       height: 600,
     }],
-    description: '台北象山健行<br/>📆活動日期：2024年8月17日週六<br/>活動照片連結：<a href="https://www.facebook.com/share/p/4DPd2EjpX5geCJX8/?mibextid=K35XfP" target="_blank" rel="noopener noreferrer"> https://www.facebook.com/share/p/4DPd2EjpX5geCJX8/?mibextid=K35XfP </a><br/>高雄壽山健行<br/>📆日期：113/8/24(六)<br/>活動照片連結：<a href="https://www.facebook.com/share/p/bFKVK4ACk1yKknjt/?mibextid=K35XfP" target="_blank" rel="noopener noreferrer"> https://www.facebook.com/share/p/bFKVK4ACk1yKknjt/?mibextid=K35XfP </a><br/>台中東海大學健行<br/>🎯活動日期：113/8/31(六)<br/>活動照片連結：<a href="https://www.facebook.com/share/p/7q7kmaP9UorHD1MQ/?mibextid=K35XfP" target="_blank" rel="noopener noreferrer"> https://www.facebook.com/share/p/7q7kmaP9UorHD1MQ/?mibextid=K35XfP </a><br/>',
+    description: '台北象山健行<br/>📆活動日期：2024年8月17日週六<br/>活動照片連結：<a href="https://www.facebook.com/share/p/4DPd2EjpX5geCJX8/?mibextid=K35XfP" target="_blank" rel="noopener noreferrer"> https://www.facebook.com/share/p/4DPd2EjpX5geCJX8/?mibextid=K35XfP </a><br/>',
     location:'', 
     link:'https://imgur.com/a/I1pSv1W' },
 

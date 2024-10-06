@@ -1,8 +1,30 @@
 import { NextResponse } from 'next/server';
 
 const events = [
-  { id:'1', title: '台北成大校友會 9/21活動', date: '2024-09-21', description: '跨文化講座', link:'https://imgur.com/a/I1pSv1W'},
-  { id:'2', title: '登山健行活動', date: '2024-09-30', description: '台北山行活動', link:'https://imgur.com/a/I1pSv1W'},
+  { id:'1', 
+    title: '台中東海大學健行', 
+    date: '民國113年8月31日', 
+    description: '跨文化講座', 
+    image:{
+      src: "/images/taichunghiking1.jpg",
+      width: 400,
+      height: 600,
+    },
+    link:'https://imgur.com/a/I1pSv1W'
+  },
+
+  { id:'2', 
+    title: '高雄壽山健行', 
+    date: '民國113年8月24日', 
+    description: '台北山行活動', 
+    image:{
+      src: "/images/kaosiunghiking1.jpg",
+      width: 400,
+      height: 600,
+    },
+    link:'https://imgur.com/a/I1pSv1W'
+  },
+
   { id:'3', 
     title: '輪遊高雄港', 
     date: '2024-3-24', 
@@ -16,8 +38,8 @@ const events = [
   },
 
   { id:'4', 
-    title: '登山活動', 
-    date: '2024-10-20', 
+    title: '台北象山健行', 
+    date: '民國113年8月17日', 
     description: '', 
     image:{
       src: "/images/hiking.jpg",
