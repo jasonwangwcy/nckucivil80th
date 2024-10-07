@@ -2,26 +2,67 @@ import { NextResponse } from 'next/server';
 
 const events = [
   { id:'1',title: '小工程師手作教室', 
-    date: '民國113年11月9日 (星期六) 13:30~15:30', 
+    date: '活動時間：民國113年11月9日  (星期六)  13:30～15:30', 
     image:[
       {
-      src: "/images/smallengineer.jpg",
+      src: "/images/smallengineer2.jpg",
       width: 400,
       height: 600, 
       },
-      
+      {
+        src: "/images/smallengineer3.jpg",
+        width: 400,
+        height: 600, 
+        },
+      {
+          src: "/images/smallengineer4.jpg",
+          width: 400,
+          height: 600, 
+          },
+      {
+      src: "/images/smallengineer5.jpg",
+      width: 400,
+      height: 600, 
+      },
+      {
+        src: "/images/smallengineer6.jpg",
+        width: 400,
+        height: 600, 
+        },
   ],  
     description:'從動手做開始<br/>闖關方式，拍照打卡上傳，設關主說明輔導<br/>拉張系統<br/>液壓夾爪<br/>滾珠軌道<br/>風力仿生獸<br/>萬年曆',
+    location:'⚛️活動地點：國立成功大學土木系館。',
     link:''},
   { id:'2',title: '系友講堂', 
     date: '⚛️活動時間：民國113年11月9日  (星期六)  13:30～15:30', 
     image:[
       {
-      src: "/images/lecture2.jpg",
+      src: "/images/lecture3.png",
       width: 400,
       height: 600,
-    }],
-    description: '教室A:資深學長回顧與分享<br/>教室B: 非典型土木人生<br/>教室C: 小小工程師手作體驗',
+    },
+    {
+      src: "/images/lecture4.png",
+      width: 400,
+      height: 600,
+    },
+    {
+      src: "/images/openmic1.png",
+      width: 400,
+      height: 600,
+    },
+    {
+      src: "/images/openmic2.jpg",
+      width: 400,
+      height: 600,
+    },
+    {
+      src: "/images/openmic3.jpg",
+      width: 400,
+      height: 600,
+    },
+  ],
+    description: '教室A: 資深學長回顧與分享<br/>教室B: 非典型土木人生--- Open Mic短講<br/>',
     location:'⚛️活動地點：國立成功大學土木系館。',
     link:''},
 
@@ -112,6 +153,11 @@ const events = [
         },
         {
           src: "/images/partyfood6.jpg",
+          width: 400,
+          height: 600,
+        },
+        {
+          src: "/images/partyfood7.jpg",
           width: 400,
           height: 600,
         },
