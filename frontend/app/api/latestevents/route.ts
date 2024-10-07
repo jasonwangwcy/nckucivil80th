@@ -35,16 +35,15 @@ const latestevents = [
     link:'https://reurl.cc/xvp46z' 
   },
 
-  { id:'4', 
-    title: '系慶餐會報名', 
+  { id:'1',
+    title: '小工程師手作教室', 
     date: '', 
-    description: '', 
     image:{
-      src: "/images/party.jpg",
+      src: "/images/smallengineer.jpg",
       width: 400,
       height: 600,
-    },
-    link:'https://reurl.cc/WNz0Y5' },
+    },  
+    link:'/communities/1'},
 
 ];
 

@@ -155,7 +155,7 @@ export default function HomePage() {
       <TableCell className="font-medium">2024年11/9（六） 13:30～15:30</TableCell>
       <TableCell className="font-medium">
           <Link href="/communities/2" legacyBehavior>
-            <a className="hover:underline">系友講堂</a>
+            <a className="hover:underline">系友講堂及小工程師手作教室</a>
           </Link>
         </TableCell>
       </TableRow>
@@ -215,7 +215,7 @@ export default function HomePage() {
      
       <h1 className="text-3xl font-bold text-red-700 my-4 ">系慶活動</h1> 
       <div className="bg-red-100 p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {communities.map((event, index) => (
+          {communities.slice(-8).map((event, index) => (
               <div key={index} className="bg-white">
             <Link href={`/communities/${index + 1}`} legacyBehavior>
           <div className="aspect-w-16 aspect-h-9">
@@ -239,7 +239,7 @@ export default function HomePage() {
                 <h1 className="text-3xl font-bold text-red-700 my-4">系列活動</h1>
           <div className="bg-white p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {events.length > 0 ? (
-               events.slice(-4).reverse().map((event, index) => (
+               events.slice(-8).reverse().map((event, index) => (
               <div key={index} className="bg-white">
                <Link href={`/events/${events.length - index}`} legacyBehavior>
                 <div className="aspect-w-16 aspect-h-9">
@@ -261,6 +261,11 @@ export default function HomePage() {
             ) : (
            <p>沒有活動可顯示</p>
                   )}
+            <div className="col-span-full flex justify-center mt-4">
+          <Link href="/events" legacyBehavior>
+            <a className="px-3 py-1 bg-gradient-to-r from-red-500 to-red-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition transform duration-300 absolute right-4">查看更多系列活動</a>
+           </Link>
+            </div>      
         </div>    
     </>
    );

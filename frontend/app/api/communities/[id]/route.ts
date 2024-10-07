@@ -1,36 +1,18 @@
 import { NextResponse } from 'next/server';
 
 const events = [
-  { id:'1', 
-    title: '系史及系友生活相片展', 
-    date: '⚛️活動時間：民國113年11月9日  (星期六)  09:00～16:00', 
+  { id:'1',title: '小工程師手作教室', 
+    date: '民國113年11月9日 (星期六) 13:30~15:30', 
     image:[
       {
-      src: "/images/studentlife.png",
+      src: "/images/smallengineer.jpg",
       width: 400,
-      height: 600,
-    },
-    {
-      src: "/images/studentlife2.jpg",
-      width: 400,
-      height: 600,
-    },
-    {
-      src: "/images/studentlife3.jpg",
-      width: 400,
-      height: 600,
-    },
-    {
-      src: "/images/studentlife4.jpg",
-      width: 400,
-      height: 600,
-    },
-  ], 
-    description: '把我們的回憶與系史同展、同藏',
-    location:'⚛️活動地點：國立成功大學土木系館',
-    link:'https://reurl.cc/g6Dop7'
-  },
-
+      height: 600, 
+      },
+      
+  ],  
+    description:'從動手做開始<br/>闖關方式，拍照打卡上傳，設關主說明輔導<br/>拉張系統<br/>液壓夾爪<br/>滾珠軌道<br/>風力仿生獸<br/>萬年曆',
+    link:''},
   { id:'2',title: '系友講堂', 
     date: '⚛️活動時間：民國113年11月9日  (星期六)  13:30～15:30', 
     image:[
@@ -104,10 +86,36 @@ const events = [
         date: '⚛️活動時間：民國113年11月9日  (星期六)  11:00～14:00', 
         image:[
           {
-          src: "/images/party2.png",
+          src: "/images/partyfood1.jpg",
           width: 400,
           height: 600,
-        }],  
+        },
+        {
+          src: "/images/partyfood2.jpg",
+          width: 400,
+          height: 600,
+        },
+        {
+          src: "/images/partyfood3.jpg",
+          width: 400,
+          height: 600,
+        },
+        {
+          src: "/images/partyfood4.jpg",
+          width: 400,
+          height: 600,
+        },
+        {
+          src: "/images/partyfood5.jpg",
+          width: 400,
+          height: 600,
+        },
+        {
+          src: "/images/partyfood6.jpg",
+          width: 400,
+          height: 600,
+        },
+      ],  
         description: '胖卡餐車讓您回味記憶中的味道',
         location:'⚛️活動地點：國立成功大學土木系館前，共計6攤。<br/>⚛️費用：免費',
         link:''},
@@ -151,6 +159,35 @@ const events = [
         description: '一起回憶在球場奔馳的青春',
         location:'⚛️🍻地點：各球場',  
         link:''},
+        { id:'9', 
+          title: '系史及系友生活相片展', 
+          date: '⚛️活動時間：民國113年11月9日  (星期六)  09:00～16:00', 
+          image:[
+            {
+            src: "/images/studentlife.png",
+            width: 400,
+            height: 600,
+          },
+          {
+            src: "/images/studentlife2.jpg",
+            width: 400,
+            height: 600,
+          },
+          {
+            src: "/images/studentlife3.jpg",
+            width: 400,
+            height: 600,
+          },
+          {
+            src: "/images/studentlife4.jpg",
+            width: 400,
+            height: 600,
+          },
+        ], 
+          description: '把我們的回憶與系史同展、同藏',
+          location:'⚛️活動地點：國立成功大學土木系館',
+          link:'https://reurl.cc/g6Dop7'
+        },
 ]
 
 export async function GET(request: Request, { params }: { params: { id: string } }) {

@@ -1,16 +1,14 @@
 import { NextResponse } from 'next/server';
 
 const events = [
-  { id:'1', 
-    title: '系史及系友生活相片展', 
-    date: '民國113年11月9日  (星期六)  09:00～16:00', 
+  { id:'1',title: '小工程師手作教室', 
+    date: '民國113年11月9日 (星期六) 13:30~15:30', 
     image:{
-      src: "/images/studentlife.png",
+      src: "/images/smallengineer.jpg",
       width: 400,
       height: 600,
-    }, 
-    link:'https://www.ncku.edu.tw/'
-  },
+    },  
+    link:''},
   { id:'2',title: '系友講堂', 
     date: '民國113年11月9日  (星期六)  13:30～15:30', 
     image:{
@@ -67,6 +65,16 @@ const events = [
             height: 600,
           },  
           link:''},
+          { id:'9', 
+            title: '系史及系友生活相片展', 
+            date: '民國113年11月9日  (星期六)  09:00～16:00', 
+            image:{
+              src: "/images/studentlife.png",
+              width: 400,
+              height: 600,
+            }, 
+            link:'https://www.ncku.edu.tw/'
+          },
 
 ];
 

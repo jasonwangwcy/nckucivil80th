@@ -53,6 +53,30 @@ export default function LinksPage() {
               成大土木系
             </a>
           </li>
+          <li>
+            <a href="http://foundation.civil.ncku.edu.tw/" 
+               className="text-blue-500 hover:underline" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              成大土木文教基金會
+            </a>
+          </li>
+          <li>
+            <a href="https://www.ncku.edu.tw/" 
+               className="text-blue-500 hover:underline" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              國立成功大學
+            </a>
+          </li>
+          <li>
+            <a href="https://www.alumni-ncku.tw/" 
+               className="text-blue-500 hover:underline" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              國立成功大學校友總會
+            </a>
+          </li>
         </ul>
       </div>
     </section>
