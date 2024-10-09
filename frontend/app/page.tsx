@@ -167,7 +167,7 @@ export default function HomePage() {
       <Carousel 
        plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 3000,
         }),
       ]}className="h-full w-full relative ">
         <CarouselContent className="h-full">
