@@ -47,7 +47,7 @@ const events = [
       height: 600,
     },
     {
-      src: "/images/openmic1.png",
+      src: "/images/openmic1c.png",
       width: 400,
       height: 600,
     },
