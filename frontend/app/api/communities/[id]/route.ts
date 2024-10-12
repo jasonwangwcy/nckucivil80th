@@ -42,7 +42,7 @@ const events = [
       height: 600,
     },
     {
-      src: "/images/lecture4.png",
+      src: "/images/lecture4a.png",
       width: 400,
       height: 600,
     },
