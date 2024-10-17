@@ -93,7 +93,11 @@ export default function HomePage() {
     <TableBody>
     <TableRow>
       <TableCell className="font-medium">2024年11/9（六） 11:00～11:30</TableCell>
-      <TableCell className="font-medium">開幕儀式</TableCell>
+      <TableCell className="font-medium">
+        <Link href="/communities/10" legacyBehavior>
+        開幕儀式
+        </Link>
+        </TableCell>
       </TableRow>
       <TableRow>
       <TableCell className="font-medium">2024年11/9（六） 09:00～16:00</TableCell>
@@ -154,7 +158,7 @@ export default function HomePage() {
       <TableRow>
       <TableCell className="font-medium">2024年11/9（六） 13:30～15:30</TableCell>
       <TableCell className="font-medium">
-          <Link href="/communities/2" legacyBehavior>
+          <Link href="/littleengineer" legacyBehavior>
             <a className="hover:underline">系友講堂及小工程師手作教室</a>
           </Link>
         </TableCell>
