@@ -1,38 +1,35 @@
 import { NextResponse } from 'next/server';
 
 const events = [
-  { id:'1',title: '小工程師手作教室', 
-    date: '活動時間：民國113年11月9日  (星期六)  13:30～15:30', 
-    image:[
-      {
-      src: "/images/smallengineer2.jpg",
-      width: 400,
-      height: 600, 
+    { id:'1', 
+      title: '系史及系友生活相片展', 
+      date: '⚛️活動時間：民國113年11月9日  (星期六)  09:00～16:00', 
+      image:[
+        {
+        src: "/images/studentlife.png",
+        width: 400,
+        height: 600,
       },
       {
-        src: "/images/smallengineer3.jpg",
+        src: "/images/studentlife2.jpg",
         width: 400,
-        height: 600, 
-        },
-      {
-          src: "/images/smallengineer4.jpg",
-          width: 400,
-          height: 600, 
-          },
-      {
-      src: "/images/smallengineer5.jpg",
-      width: 400,
-      height: 600, 
+        height: 600,
       },
       {
-        src: "/images/smallengineer6.jpg",
+        src: "/images/studentlife3.jpg",
         width: 400,
-        height: 600, 
-        },
-  ],  
-    description:'從動手做開始<br/>闖關方式，拍照打卡上傳，設關主說明輔導<br/>拉張系統<br/>液壓夾爪<br/>滾珠軌道<br/>風力仿生獸<br/>萬年曆',
-    location:'⚛️活動地點：國立成功大學土木系館。',
-    link:''},
+        height: 600,
+      },
+      {
+        src: "/images/studentlife4.jpg",
+        width: 400,
+        height: 600,
+      },
+    ], 
+      description: '把我們的回憶與系史同展、同藏',
+      location:'⚛️活動地點：國立成功大學土木系館',
+      link:'https://reurl.cc/g6Dop7'
+    },
   { id:'2',title: '系友講堂', 
     date: '⚛️活動時間：民國113年11月9日  (星期六)  13:30～15:30', 
     image:[
@@ -195,9 +192,9 @@ const events = [
           height: 600,
         },
       ],
-        description: '⚛️ 80週年紀念郵戳、明信片、郵局商品販售<br/>⚛️寄給未來-未來信件活動：',
+        description: '📮成大土木80周年<br/>📮專設臨時郵局及郵戳公告<br/>⚛️ 80週年紀念郵戳、明信片、郵局商品販售<br/>⚛️寄給未來-未來信件活動：',
         location:'⚛️活動地點：園遊會攤位',  
-        link:''},
+        link:'https://reurl.cc/Or33Yy'},
 
       { id:'8',title: '系友OB球賽', 
         date: '🍻時間：113/11/9(六)席', 
@@ -221,43 +218,82 @@ const events = [
         description: '一起回憶在球場奔馳的青春',
         location:'⚛️🍻地點：各球場',  
         link:''},
-        { id:'9', 
-          title: '系史及系友生活相片展', 
-          date: '⚛️活動時間：民國113年11月9日  (星期六)  09:00～16:00', 
+        { id:'9',title: '小工程師手作教室', 
+          date: '活動時間：民國113年11月9日  (星期六)  13:30～15:30', 
           image:[
             {
-            src: "/images/studentlife.png",
+            src: "/images/smallengineer2.jpg",
             width: 400,
-            height: 600,
-          },
-          {
-            src: "/images/studentlife2.jpg",
+            height: 600, 
+            },
+            {
+              src: "/images/smallengineer3.jpg",
+              width: 400,
+              height: 600, 
+              },
+            {
+                src: "/images/smallengineer4.jpg",
+                width: 400,
+                height: 600, 
+                },
+            {
+            src: "/images/smallengineer5.jpg",
             width: 400,
-            height: 600,
-          },
-          {
-            src: "/images/studentlife3.jpg",
-            width: 400,
-            height: 600,
-          },
-          {
-            src: "/images/studentlife4.jpg",
-            width: 400,
-            height: 600,
-          },
-        ], 
-          description: '把我們的回憶與系史同展、同藏',
-          location:'⚛️活動地點：國立成功大學土木系館',
-          link:'https://reurl.cc/g6Dop7'
-        },
+            height: 600, 
+            },
+            {
+              src: "/images/smallengineer6.jpg",
+              width: 400,
+              height: 600, 
+              },
+        ],  
+          description:'從動手做開始<br/>闖關方式，拍照打卡上傳，設關主說明輔導<br/>拉張系統<br/>液壓夾爪<br/>滾珠軌道<br/>風力仿生獸<br/>萬年曆',
+          location:'⚛️活動地點：國立成功大學土木系館。',
+          link:''},
         { id:'10', 
           title: '開幕儀式', 
           date: '⚛️活動時間：民國113年11月9日  (星期六)  11:00-11:30', 
-          image:[ ], 
+          image:[ 
+            {
+            src: "/images/openning.png",
+              width: 400,
+              height: 600,
+            },   
+          ], 
           description: '一、 典禮開始：主辦單位代表敲鑼宣布「敲開幕鑼」<br/>二、 主辦單位代表致詞<br/>三、 貴賓介紹<br/>四、 貴賓致詞<br/>五、 大合照<br/>六、 禮成<br/>七、引導貴賓們參觀「系史及系友生活展」和「產業交流展及園遊會」',
           location:'⚛️活動地點：系館對面總圖廣場',
           link:''
         },
+        { id:'11', 
+          title: '八十系慶魔幻拍貼機', 
+          date: '⚛️活動時間：民國113年11月9日  (星期六)  13:00-16:00', 
+          image:[
+            {
+              src: "/images/photobooth1.jpg",
+                width: 400,
+                height: 600,
+              },  
+            {
+              src: "/images/photobooth3.jpg",
+                width: 400,
+                height: 600,
+              },
+               {
+              src: "/images/photobooth5.jpg",
+                width: 400,
+                height: 600,
+              }, 
+               {
+              src: "/images/photobooth6.jpg",
+                width: 400,
+                height: 600,
+              }, 
+           ], 
+          description: '📸14種背景任你挑選<br/>🌇可自行下載留存<br/>🌄系慶當日現場送列印收藏<br/>👫珍藏八十年一次的畫面',
+          location:'⏰13:00-16:00 總圖前園遊會場</br>⏰17:00-21:00 雅悅會館餐會現場場',
+          link:''
+        },
+
 ]
 
 export async function GET(request: Request, { params }: { params: { id: string } }) {

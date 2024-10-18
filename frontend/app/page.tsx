@@ -20,8 +20,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function HomePage() {
-  const [events, setEvents] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
-  const [communities, setCommunities] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
+  const [events, setEvents] = useState<{ title: string; date: string; description: string, link: string, image: string, id: string }[]>([]);
+  const [communities, setCommunities] = useState<{ title: string; date: string; description: string, link: string, image: string, id: number }[]>([]);
   const [images, setImages] = useState<{ id: string; image: { src: string; width: number; height: number } }[]>([]);
   const [latestevents, setLatestevents] = useState<{ title: string; date: string; description: string, link: string, image: string }[]>([]);
 
@@ -219,9 +219,9 @@ export default function HomePage() {
      
       <h1 className="text-3xl font-bold text-red-700 my-4 ">系慶活動</h1> 
       <div className="bg-red-100 p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {communities.slice(-8).map((event, index) => (
+      {communities.filter((event) => event.id >= 1 && event.id <= 8).map((event, index) => (
               <div key={index} className="bg-white">
-            <Link href={`/communities/${index + 2}`} legacyBehavior>
+            <Link href={`/communities/${index + 4}`} legacyBehavior>
           <div className="aspect-w-16 aspect-h-9">
             <Image 
             src={event.image} 
@@ -231,7 +231,7 @@ export default function HomePage() {
              </div>
               </Link>
             <h3 className="font-bold text-center">
-              <Link href={`/communities/${index + 2}`} legacyBehavior>
+              <Link href={`/communities/${index + 4}`} legacyBehavior>
            <a className="text-blue-500 hover:underline text-sm sm:text-base">{event.title}</a>
            </Link>
                </h3>

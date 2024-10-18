@@ -43,7 +43,7 @@ const latestevents = [
       width: 400,
       height: 600,
     },  
-    link:'/communities/1'},
+    link:'/communities/9'},
 
 ];
 
