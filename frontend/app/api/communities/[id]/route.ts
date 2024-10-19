@@ -291,7 +291,7 @@ const events = [
            ], 
           description: '📸14種背景任你挑選<br/>🌇可自行下載留存<br/>🌄系慶當日現場送列印收藏<br/>👫珍藏八十年一次的畫面',
           location:'⏰13:00-16:00 總圖前園遊會場</br>⏰17:00-21:00 雅悅會館餐會現場場',
-          link:''
+          link:'https://line.me/ti/p/%40094yuqax'
         },
 
 ]
