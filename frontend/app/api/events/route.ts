@@ -74,7 +74,7 @@ const events = [
     date: '113年10月19日', 
     description: '(confetti cup)成土飛揚、八方十洲(confetti cup)80周年系慶系列活動--中區講座重金邀請張金鶚得意門生、實價登錄始作俑者--成大統計系范垂爐學長以風趣的內容，為我們解說未來房產趨勢(open book)講座題目:看不到盡頭的房價(groom)主講人:范垂爐(Feb 14)時間:113年10月19日(六)  14:00~16:00(13:30報到)(cabin)地點:台中市北屯區文心路四段936號3樓_文心會議室_303室費用:免費名額:限量30名報名截止日期:113年9月30日主辦:成大土木系友會聯絡人:李梓賢 報名網址:https://forms.gle/3bEisbxUxmWicXTh9',
     image:{
-      src: "/images/lecture.jpg",
+      src: "/images/lecture1.jpg",
       width: 400,
       height: 600,
     },  

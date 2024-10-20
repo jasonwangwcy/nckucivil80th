@@ -119,10 +119,38 @@ const events = [
     description: '成土飛揚、八方十洲<br />80周年系慶系列活動--中區講座<br />重金邀請張金鶚得意門生、實價登錄始作俑者--成大統計系范垂爐學長以風趣的內容，為我們解說未來房產趨勢<br />講座題目:看不到盡頭的房價<br />主講人:范垂爐<br />時間:113年10月19日(六)  14:00~16:00(13:30報到)<br />地點:台中市北屯區文心路四段936號3樓_文心會議室_303室<br />費用:免費名額:限量30名<br />報名截止日期:113年9月30日<br />主辦:成大土木系友會聯絡人:李梓賢 <br />報名網址:<a href="https://forms.gle/3bEisbxUxmWicXTh9" target="_blank" rel="noopener noreferrer"> https://forms.gle/3bEisbxUxmWicXTh9 </a>',
     image:[
     {
-      src: "/images/lecture.jpg",
+      src: "/images/lecture1.jpg",
       width: 400,
       height: 600,
-    }],   
+    },
+    {
+      src: "/images/lecture2_.jpg",
+      width: 400,
+      height: 600,
+    },
+    {
+      src: "/images/lecture3.jpg",
+      width: 400,
+      height: 600,
+    },
+    {
+      src: "/images/lecture4.jpg",
+      width: 400,
+      height: 600,
+    },
+    {
+      src: "/images/lecture5.jpg",
+      width: 400,
+      height: 600,
+    },
+    {
+      src: "/images/lecture6.jpg",
+      width: 400,
+      height: 600,
+    },
+    
+  
+  ],   
     link:'https://imgur.com/a/I1pSv1W'  },
   { id:'8', title: '帆遊安平港', 
     date: '民國113年11月10日', 
