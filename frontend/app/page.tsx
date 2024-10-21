@@ -221,7 +221,7 @@ export default function HomePage() {
       <div className="bg-red-100 p-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {communities.filter((event) => event.id >= 1 && event.id <= 8).map((event, index) => (
               <div key={index} className="bg-white">
-            <Link href={`/communities/${index + 4}`} legacyBehavior>
+            <Link href={`/communities/${index + 1}`} legacyBehavior>
           <div className="aspect-w-16 aspect-h-9">
             <Image 
             src={event.image} 
@@ -231,7 +231,7 @@ export default function HomePage() {
              </div>
               </Link>
             <h3 className="font-bold text-center">
-              <Link href={`/communities/${index + 4}`} legacyBehavior>
+              <Link href={`/communities/${index + 1}`} legacyBehavior>
            <a className="text-blue-500 hover:underline text-sm sm:text-base">{event.title}</a>
            </Link>
                </h3>
