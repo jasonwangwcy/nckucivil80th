@@ -102,7 +102,7 @@ export default function HomePage() {
       <TableRow>
       <TableCell className="font-medium">2024年11/9（六） 09:00～16:00</TableCell>
       <TableCell className="font-medium">
-          <Link href="/communities/9" legacyBehavior>
+          <Link href="/communities/1" legacyBehavior>
             <a className="hover:underline">系史及系友生活相片展</a>
           </Link>
         </TableCell>
