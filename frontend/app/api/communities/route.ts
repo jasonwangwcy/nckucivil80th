@@ -27,7 +27,7 @@ const events = [
       height: 600,
     },  
     link:''},
-  { id:'4',title: '系慶餐會', 
+  { id:'4',title: '系慶千人餐會（135桌）', 
     date: '民國113年11月9日  (星期六)  18:00', 
     image:{
       src: "/images/party.jpg",
