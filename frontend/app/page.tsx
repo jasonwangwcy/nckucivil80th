@@ -151,7 +151,7 @@ export default function HomePage() {
       <TableCell className="font-medium">2024年11/9（六） 17:00～21:00</TableCell>
       <TableCell className="font-medium">
           <Link href="/communities/4" legacyBehavior>
-            <a className="hover:underline">系慶千人餐會</a>
+            <a className="hover:underline">系慶千人餐會（135桌）</a>
           </Link>
         </TableCell>
       </TableRow>

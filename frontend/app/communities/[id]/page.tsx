@@ -27,7 +27,7 @@ export default function EventDetail({ params }: { params: { id: string } }) {
     <div className="p-4 mt-20">
       <h1 className="text-3xl font-bold mb-4">{eventData.title}</h1>
       {eventData.image && eventData.image.length > 0 ? (
-        <div className="flex flex-wrap gap-4">
+        <div className="grid gap-4 sm:flex sm:flex-wrap">
           {eventData.image.map((img, index) => (
             <Image 
               key={index} 
