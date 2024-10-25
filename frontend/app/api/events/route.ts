@@ -89,6 +89,16 @@ const events = [
       height: 600,
     },
     link:'https://imgur.com/a/I1pSv1W',
+  },
+  { id:'9', title: '新書義賣捐母系', 
+    date: '民國113年11月9日', 
+    description: '', 
+    image:{
+      src: "/images/book1.jpg",
+      width: 400,
+      height: 600,
+    },
+    link:'https://imgur.com/a/I1pSv1W',
   }
 ];
 
