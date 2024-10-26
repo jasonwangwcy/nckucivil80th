@@ -163,8 +163,8 @@ const events = [
     }],
     link:'https://imgur.com/a/I1pSv1W'
   },
-  { id:'9', title: '新書義賣捐母系', 
-    date: '民國113年11月9日', 
+  { id:'9', title: '新書預購義賣捐母系', 
+    date: '民國113年11月9日簽書會', 
     description: '蔡榮根學長11/1出版的最新力作《尋找安全的家：結構技師蔡榮根教你選好宅》，為嘉惠系友，特於11/9舉辦新書義賣暨簽書會，限量150本，所有收入將捐贈成大土木文教基金會！!<br/>提前預購網址：<br/><a href="https://forms.gle/WhxieMGkEe6B9nSv9" target="_blank" rel="noopener noreferrer"> https://forms.gle/WhxieMGkEe6B9nSv9 </a>', 
     image: [
       {

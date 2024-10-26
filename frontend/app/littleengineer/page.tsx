@@ -9,7 +9,7 @@ export default function EventDetail() {
 
   useEffect(() => {
     const fetchEvents = async () => {
-      const ids = ['2', '1']; 
+      const ids = ['2', '9']; 
       const fetchPromises = ids.map((id) => fetch(`/api/communities/${id}`).then(response => response.json()));
       
       const data = await Promise.all(fetchPromises);

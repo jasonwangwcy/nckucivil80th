@@ -90,7 +90,7 @@ const events = [
     },
     link:'https://imgur.com/a/I1pSv1W',
   },
-  { id:'9', title: '新書義賣捐母系', 
+  { id:'9', title: '新書預購義賣捐母系簽書會', 
     date: '民國113年11月9日', 
     description: '', 
     image:{
