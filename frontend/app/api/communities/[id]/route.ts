@@ -59,8 +59,8 @@ const events = [
       height: 600,
     },
   ],
-    description: '教室A: 資深學長回顧與分享<br/>教室B: 非典型土木人生--- Open Mic短講<br/>',
-    location:'⚛️活動地點：國立成功大學土木系館。',
+    description: '4509: 資深學長回顧與分享<br/>4507: 非典型土木人生--- Open Mic短講<br/>',
+    location:'⚛️活動地點：國立成功大學土木系館4507，4509。',
     link:''},
 
   { id:'3',title: '系慶同學會', 
@@ -71,7 +71,7 @@ const events = [
       width: 400,
       height: 600,
     }],  
-    description: '畢業整數級系友返系同學會教室<br/>A: 63級教室<br/>B: 83級教室<br/>C: 93級',
+    description: '畢業整數級系友返系同學會教室<br/>A: 4505 63級<br/>B: 4504、4506 83級<br/>C: 93級',
     location:'⚛️活動地點：國立成功大學土木系館。',
     link:''},
 
@@ -152,6 +152,16 @@ const events = [
       },
       {
         src: "/images/ad13.jpg",
+        width: 1920,
+        height: 1800,
+      },
+      {
+        src: "/images/ad14.png",
+        width: 1920,
+        height: 1800,
+      },
+      {
+        src: "/images/ad15.png",
         width: 1920,
         height: 1800,
       },
