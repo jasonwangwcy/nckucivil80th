@@ -34,12 +34,12 @@ const events = [
     date: '⚛️活動時間：民國113年11月9日  (星期六)  13:30～15:30', 
     image:[
       {
-      src: "/images/lecture3.png",
+      src: "/images/lecture4507.png",
       width: 400,
       height: 600,
     },
     {
-      src: "/images/lecture4a.png",
+      src: "/images/lecture4509.png",
       width: 400,
       height: 600,
     },
