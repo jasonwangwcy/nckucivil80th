@@ -132,26 +132,10 @@ export default function HomePage() {
         </TableCell>
       </TableRow>
       <TableRow>
-      <TableCell className="font-medium">2024年11/9（六） 14:00～16:00</TableCell>
-      <TableCell className="font-medium">
-          <Link href="/communities/3" legacyBehavior>
-            <a className="hover:underline">系友返校同學會</a>
-          </Link>
-        </TableCell>
-      </TableRow>
-      <TableRow>
       <TableCell className="font-medium">2024年11/9（六） 13:00～16:00</TableCell>
       <TableCell className="font-medium">
           <Link href="/communities/8" legacyBehavior>
             <a className="hover:underline">系友OB球賽</a>
-          </Link>
-        </TableCell>
-      </TableRow>
-      <TableRow>
-      <TableCell className="font-medium">2024年11/9（六） 17:00～21:00</TableCell>
-      <TableCell className="font-medium">
-          <Link href="/communities/4" legacyBehavior>
-            <a className="hover:underline">系慶千人餐會（135桌）</a>
           </Link>
         </TableCell>
       </TableRow>
@@ -163,6 +147,23 @@ export default function HomePage() {
           </Link>
         </TableCell>
       </TableRow>
+      <TableRow>
+      <TableCell className="font-medium">2024年11/9（六） 14:00～16:00</TableCell>
+      <TableCell className="font-medium">
+          <Link href="/communities/3" legacyBehavior>
+            <a className="hover:underline">系友返校同學會</a>
+          </Link>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+      <TableCell className="font-medium">2024年11/9（六） 17:00～21:00</TableCell>
+      <TableCell className="font-medium">
+          <Link href="/communities/4" legacyBehavior>
+            <a className="hover:underline">系慶千人餐會（135桌）</a>
+          </Link>
+        </TableCell>
+      </TableRow>
+      
     </TableBody>
     </Table>  
       </div>
